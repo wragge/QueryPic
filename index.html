@@ -53,6 +53,8 @@
                     <option value="aus">Australia</option>
                     <option value="nz">New Zealand</option>
                 </select>
+                <input type="radio" name="accuracy" id="exact" value="exact" checked="checked"></input> exact
+                <input type="radio" name="accuracy" id="fuzzy" value="fuzzy"></input> fuzzy
                 <button id="do_query">Show</button>
                 <button id="clear_last">Clear last</button> <button id="clear_all">Clear all</button>
             </p>
@@ -77,10 +79,15 @@
                 <h4>Hints</h4>
                 <ul id="intro-hints">
                     <li>Just enter a word or phrase to graph its frequency over time.</li>
-                    <li>Enclose your query in double quotes for an exact match.</li>
+                    <li>Enclose phrases in double quotes.</li>
+                    <li>&lsquo;Exact&rsquo; is more accurate &ndash; no plurals or variations.</li>
+                    <li>&lsquo;Fuzzy&rsquo; is more inclusive &ndash; returns variations and mispellings.</li>
                 </ul>
                 <ul id="graph-hints">
+                    <li>Enclose phrases in double quotes.</li>
                     <li>Add more keywords to compare results</li>
+                    <li>&lsquo;Exact&rsquo; is more accurate &ndash; no plurals or variations.</li>
+                    <li>&lsquo;Fuzzy&rsquo; is more inclusive &ndash; returns variations and mispellings.</li>
                     <li>Click on a point to view articles</li>
                     <li>Click on a label in the legend to hide it</li>
                     <li>Click and drag to zoom the graph</li>
@@ -104,7 +111,7 @@
                 <div class="box-content">
                 <h4>About</h4>
                 <p>QueryPic talks to the newspaper databases using APIs provided by <a href="http://digitalnz.org.nz/">DigitalNZ</a> and <a href="http://trove.nla.gov.au/general/api">Trove</a>.
-                <p>Comments or questions to Tim Sherratt (<a href="http://twitter.com/wragge">@wragge</a>).</p>
+                <p>Comments or questions to Tim Sherratt (<a href="http://twitter.com/wragge">@wragge</a>). More at <a href="http://discontents.com.au/shed/experiments/the-new-querypic-or-what-a-difference-an-api-makes">discontents</a> and the <a href="http://wraggelabs.com/emporium/trove-tools/newspaper-search-summariser/">WraggeLabs Emporium</a>.</p>
                 </div>
             </div>
         </div>
