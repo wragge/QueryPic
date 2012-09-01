@@ -71,7 +71,7 @@ $(function(){
     var trove_api_key = "6pi5hht0d2umqcro";
     var trove_api_url = "http://api.trove.nla.gov.au/result?zone=newspaper";
     var trove_html_url = "http://trove.nla.gov.au/newspaper/result?q="
-    var twitter_url ="//platform.twitter.com/widgets/tweet_button.html";
+    var twitter_url ="http://platform.twitter.com/widgets/tweet_button.html";
     var query = {};
     var decade_start = 180;
     var decade_end = 195;
@@ -236,8 +236,8 @@ $(function(){
                     }
                 }
                 qstring = encodeURIComponent(qstring);
-                query['total'] = digitalnz_api_url + '&search_text=' + qstring + '+collection:"Papers+Past"&facets=year&facet_num_results=-1&num_results=0&api_key=' + digitalnz_api_key;
-                query['ratio'] = digitalnz_api_url + '&search_text=collection:"Papers+Past"&facets=year&facet_num_results=-1&num_results=0&api_key=' + digitalnz_api_key;
+                query['total'] = digitalnz_api_url + '&search_text=' + qstring + '+collection:"Papers+Past"&facets=year&facet_num_results=200&num_results=0&api_key=' + digitalnz_api_key;
+                query['ratio'] = digitalnz_api_url + '&search_text=collection:"Papers+Past"&facets=year&facet_num_results=200&num_results=0&api_key=' + digitalnz_api_key;
                 var api_query = digitalnz_api_url + '&num_results=20&api_key=' + digitalnz_api_key + '&search_text=' + qstring + '+collection:"Papers+Past"';
                 var web_query = digitalnz_html_url + '&text=' + qstring;
                 query['country'] = 'NZ';
@@ -287,7 +287,7 @@ $(function(){
         $("#query").val("");
         var link = make_link();
         $("#link").html("Share this: <a href='" + link + "'>" + link + "</a>");
-        $("#twitter-frame").attr('src', twitter_url + "?url=" + encodeURIComponent(link) + "&text=" + encodeURIComponent("Made with QueryPicNZ") + "&hashtags=querypic");
+        $("#twitter-frame").attr('src', twitter_url + "?url=" + encodeURIComponent(link) + "&text=" + encodeURIComponent("Made with QueryPic") + "&hashtags=querypic");
         if (dataSources.sources[0].interval == "month") {
             x_date = "%b %Y";
             xLabel = "Month";
